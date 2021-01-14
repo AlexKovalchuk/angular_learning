@@ -1,1 +1,16 @@
-<p>users-list works!</p>
+<div class="users-list">
+  <div>
+    <div *ngFor="let user of usersList">
+      <app-user-list-item [user]="user" (userItemClicked)="userItemClicked($event)">
+      </app-user-list-item>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="selectedUser">
+    <app-user-list-card [selectedUser]="selectedUser">
+    </app-user-list-card>
+  </div>
+</div>
+

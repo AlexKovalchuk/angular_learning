@@ -1,0 +1,18 @@
+<div class="user-list-item" (click)="clickUserItem(user)">
+  <div>
+    Name: {{user.name}} {{user.sur_name}}
+  </div>
+  <div>
+    Age: {{user.age}}
+  </div>
+  <div>
+    Position: {{user.position}}
+  </div>
+  <div>
+    <img class="avatar-img" [src]="user.img_url" alt="alt">
+  </div>
+
+  <div>
+    <button [routerLink]="['/user-card', user.id]">show user card</button>
+  </div>
+</div>

@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { UserListItemComponent } from './user-list-item/user-list-item.component';
+import { UserListCardComponent } from './user-list-card/user-list-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersListComponent,
     UserCardComponent,
-    AddUserComponent
+    AddUserComponent,
+    UserListItemComponent,
+    UserListCardComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
