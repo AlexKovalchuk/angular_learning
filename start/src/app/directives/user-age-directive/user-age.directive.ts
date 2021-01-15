@@ -7,6 +7,8 @@ export class UserAgeDirective {
 
   constructor(el: ElementRef) {
     console.log('directive element', el);
+    // value ~ 15
+    //
   }
   @Input('ageDirective') ageDirective: number;
 
