@@ -3,13 +3,20 @@
     Name: {{selectedUser.name}} {{selectedUser.sur_name}}
   </div>
   <div>
+  <!-- <div ageDirective="selectedUser.age"> -->
     Age: {{selectedUser.age}}
+    <!-- Age: {{selectedUser.age | pipeAge}} -->
+    <!-- Age: 15 - teenAger picture -->
+    <!-- Age: 25 - youth picture -->
+    <!-- Age: 45 - middle Dev picture -->
+    <!-- Use directive! -->
   </div>
   <div>
     Position: {{selectedUser.position}}
+    <!-- Position: {{selectedUser.position | pipePosition}} -->
+    <!-- make position CUPS LOCK by pipe -->
   </div>
   <div>
     <img class="avatar-img" [src]="selectedUser.img_url" alt="alt">
   </div>
-
 </div>

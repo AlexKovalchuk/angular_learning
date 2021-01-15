@@ -7,7 +7,8 @@ import { User } from '../interfaces/user-interfaces';
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss']
+  styleUrls: ['./users-list.component.scss'],
+  // changeDetection: onPush
 })
 export class UsersListComponent implements OnInit {
   usersList: User[] = [];
@@ -20,14 +21,13 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsersList();
-    console.log('usersList', this.usersList);
-
   }
 
   getUsersList(): void {
     this.userService.getUsersList()
     .subscribe((usersList: any) => {
       this.usersList = usersList;
+      // Detect changes. TODO change detect strategy!
     }
     );
   }

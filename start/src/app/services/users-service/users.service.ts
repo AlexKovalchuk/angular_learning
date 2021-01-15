@@ -26,4 +26,8 @@ export class UsersService {
     return this.http.get<User>(`${this.usersUrl}/user-card/${id}`);
   }
 
+  addUser(newUser: any): Observable<User[]> {
+
+  }
+
 }

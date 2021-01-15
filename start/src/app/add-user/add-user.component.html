@@ -1,1 +1,43 @@
-<p>add-user works!</p>
+<h1>Add new User!</h1>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="sur_name">
+      Sur Name
+    </label>
+    <input id="sur_name" type="text" formControlName="sur_name">
+  </div>
+
+  <div>
+    <label for="age">
+      Age
+    </label>
+    <input id="age" type="number" formControlName="age">
+  </div>
+
+  <div>
+    <label for="position">
+      Position
+    </label>
+    <input id="position" type="text" formControlName="position">
+  </div>
+
+  <div>
+    <label for="img_url">
+      Image Url
+    </label>
+    <input id="img_url" type="text" formControlName="img_url">
+    <!-- https://swall.teahub.io/photos/small/303-3033000_asterix-avatar.jpg -->
+  </div>
+
+  <button class="button" type="submit">Add New User</button>
+
+</form>

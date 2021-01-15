@@ -1,15 +1,5 @@
 <div *ngIf="userCard" class="user-card">
-  <div>
-    Name: {{userCard.name}} {{userCard.sur_name}}
-  </div>
-  <div>
-    Age: {{userCard.age}}
-  </div>
-  <div>
-    Position: {{userCard.position}}
-  </div>
-  <div>
-    <img class="avatar-img" [src]="userCard.img_url" alt="alt">
-  </div>
-
+  <app-user-list-card [selectedUser]="userCard">
+  </app-user-list-card>
 </div>
+
