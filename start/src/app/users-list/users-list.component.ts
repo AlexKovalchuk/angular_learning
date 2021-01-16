@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../services/users-service/users.service';
 import { User } from '../interfaces/user-interfaces';
@@ -8,7 +8,7 @@ import { User } from '../interfaces/user-interfaces';
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.scss'],
-  // changeDetection: onPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UsersListComponent implements OnInit {
   usersList: User[] = [];
@@ -16,7 +16,8 @@ export class UsersListComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private userService: UsersService
+    private userService: UsersService,
+    private ref: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -27,6 +28,8 @@ export class UsersListComponent implements OnInit {
     this.userService.getUsersList()
     .subscribe((usersList: any) => {
       this.usersList = usersList;
+      console.log(this.usersList);
+      this.ref.markForCheck();
       // Detect changes. TODO change detect strategy!
     }
     );

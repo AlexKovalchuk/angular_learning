@@ -11,6 +11,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
 import { UserListCardComponent } from './user-list-card/user-list-card.component';
 import { UserAgeDirective } from './directives/user-age-directive/user-age.directive';
+import { PositionPipe } from './pipe/position-pipe/position.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserAgeDirective } from './directives/user-age-directive/user-age.direc
     AddUserComponent,
     UserListItemComponent,
     UserListCardComponent,
-    UserAgeDirective
+    UserAgeDirective,
+    PositionPipe
   ],
   imports: [
     BrowserModule,
