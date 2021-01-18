@@ -8,11 +8,13 @@ export class UserAgeDirective implements OnInit {
 
   constructor(private el: ElementRef) {  }
 
-  @Input('appUserAge') userAge: number;
+  @Input('appUserAge') userAge: number; // declare a func getUserAge - parameter gertter function.
 
   ngOnInit(): void {
     this.setUserAge(this.userAge);
   }
+
+  // use onChange to refresh the text
 
   setUserAge(age: number): void {
     if (age <= 15) {

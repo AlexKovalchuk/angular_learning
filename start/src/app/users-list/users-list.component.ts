@@ -37,6 +37,7 @@ export class UsersListComponent implements OnInit {
 
   userItemClicked(user: User): void {
     this.selectedUser = user;
+    this.ref.detectChanges();
   }
 
 }

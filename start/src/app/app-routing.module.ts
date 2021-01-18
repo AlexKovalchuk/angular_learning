@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'users-list', component: UsersListComponent },
   { path: 'user-card/:userId', component: UserCardComponent },
   { path: 'add-user', component: AddUserComponent },
+  { path: 'superUsers', loadChildren: () => import('./super-users/super-users.module').then(m => m.SuperUsersModule) },
 ];
 
 @NgModule({

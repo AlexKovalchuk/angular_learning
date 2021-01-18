@@ -34,3 +34,4 @@ import { PositionPipe } from './pipe/position-pipe/position.pipe';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// ng generate module superUsers --route superUsers --module app.module
