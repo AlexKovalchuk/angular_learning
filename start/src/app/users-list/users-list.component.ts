@@ -18,9 +18,7 @@ export class UsersListComponent implements OnInit {
     private route: ActivatedRoute,
     private userService: UsersService,
     private ref: ChangeDetectorRef
-  ) {
-    selectedUser = null;
-  }
+  ) {}
 
   ngOnInit(): void {
     this.getUsersList();
