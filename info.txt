@@ -1,0 +1,24 @@
+1) Read doc https://angular.io/guide/ngmodules / dependency injections.
+2) Find and read and understand interview manual in English
+3)Wellcome Page:
+  -go to users
+    service for users only
+  -go to superUsers
+    service for superUsers only
+
+app (/)
+app.component
+app.module
+
+    (/users)
+    users.module
+    users-list
+    users-cards
+    add-users
+    users.service !!! service for users only
+
+
+    (/suerUsers)
+    super.module
+    super-users
+    superUsers.service  !!! service for superUsers only
