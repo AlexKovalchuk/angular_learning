@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UsersService } from '../services/users-service/users.service';
-import { User } from '../interfaces/user-interfaces';
+import { UsersService } from '../../services/users-service/users.service';
+import { User } from '../../interfaces/user-interfaces';
 
 
 @Component({

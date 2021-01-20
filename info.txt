@@ -10,15 +10,14 @@ app (/)
 app.component
 app.module
 
-    (/users)
-    users.module
-    users-list
-    users-cards
-    add-users
-    users.service !!! service for users only
+  (/users)
+  users.module
+  users-list
+  users-cards
+  add-users
+  users.service !!! service for users only
 
-
-    (/suerUsers)
-    super.module
-    super-users
-    superUsers.service  !!! service for superUsers only
+  (/suerUsers)
+  super.module
+  super-users
+  superUsers.service  !!! service for superUsers only
