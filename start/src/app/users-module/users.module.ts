@@ -11,6 +11,7 @@ import { UserListCardComponent } from './user-list-card/user-list-card.component
 
 import { UserAgeDirective } from '../directives/user-age-directive/user-age.directive';
 import { PositionPipe } from '../pipe/position-pipe/position.pipe';
+import { UsersService } from '../services/users-service/users.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PositionPipe } from '../pipe/position-pipe/position.pipe';
   imports: [
     CommonModule,
     UsersRoutingModule
-  ]
+  ],
+  providers: [UsersService],
 })
 export class UsersModule { }
