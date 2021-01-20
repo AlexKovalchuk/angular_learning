@@ -12,7 +12,7 @@ import { User } from '../../interfaces/user-interfaces';
 })
 export class UsersListComponent implements OnInit {
   usersList: User[] = [];
-  selectedUser: User;
+  selectedUser: User | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +30,6 @@ export class UsersListComponent implements OnInit {
       this.usersList = usersList;
       console.log(this.usersList);
       this.ref.markForCheck();
-      // Detect changes. TODO change detect strategy!
     }
     );
   }
