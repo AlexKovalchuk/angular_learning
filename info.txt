@@ -21,3 +21,7 @@ app.module
   super.module
   super-users
   superUsers.service  !!! service for superUsers only
+  
+  4)Create http interceptor to add additional parameters for all your http requests.
+For GET requests add parameter "inputData": true
+For POST requests add parameter "outputData": true
