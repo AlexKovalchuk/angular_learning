@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { User } from '../interfaces/user-interfaces';
+import { User } from '../../interfaces/user-interfaces';
 
 @Component({
   selector: 'app-user-list-item',
@@ -7,11 +7,10 @@ import { User } from '../interfaces/user-interfaces';
   styleUrls: ['./user-list-item.component.scss']
 })
 export class UserListItemComponent implements OnInit {
-
-  constructor() { }
-
-  @Input()  user: User;
+  @Input()  user: User | undefined;
   @Output() userItemClicked = new EventEmitter<User>();
+
+  constructor() {}
 
   ngOnInit(): void {}
 

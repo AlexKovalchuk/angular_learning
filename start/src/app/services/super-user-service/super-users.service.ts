@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { User } from 'src/app/interfaces/user-interfaces';
 
 @Injectable()
-export class UsersService {
+export class SuperUsersService {
 
   constructor(
     private http: HttpClient,
