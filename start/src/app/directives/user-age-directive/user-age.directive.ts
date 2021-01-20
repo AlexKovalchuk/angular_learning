@@ -4,11 +4,11 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[appUserAge]'
 })
 export class UserAgeDirective implements OnInit {
+  @Input('appUserAge') userAge: number; // declare a func getUserAge - parameter gertter function.
 
 
   constructor(private el: ElementRef) {  }
 
-  @Input('appUserAge') userAge: number; // declare a func getUserAge - parameter gertter function.
 
   ngOnInit(): void {
     this.setUserAge(this.userAge);

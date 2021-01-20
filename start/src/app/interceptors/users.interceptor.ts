@@ -12,7 +12,23 @@ export class UsersInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    console.log('request', request);
+    const {method} = request;
+    if (method === 'POST') {
+      request = request.clone({
+        setHeaders: {
+          outputData: 'true'
+        }
+      });
+    }
+    if (method === 'GET') {
+      request = request.clone({
+        setHeaders: {
+          inputData: 'true'
+        }
+      });
+    }
     return next.handle(request);
   }
 }
