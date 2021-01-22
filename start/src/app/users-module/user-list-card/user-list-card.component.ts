@@ -8,7 +8,7 @@ import { User } from '../../interfaces/user-interfaces';
   styleUrls: ['./user-list-card.component.scss']
 })
 export class UserListCardComponent implements OnInit {
-  @Input()  selectedUser: User;
+  @Input()  selectedUser: User | undefined;
 
   constructor() { }
 

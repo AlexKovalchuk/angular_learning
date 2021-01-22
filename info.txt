@@ -25,3 +25,52 @@ app.module
   4)Create http interceptor to add additional parameters for all your http requests.
 For GET requests add parameter "inputData": true
 For POST requests add parameter "outputData": true
+
+Interview questions:
+1)What is Angular.
+2)Why was Angular introduced as a client-side framework?
+3)Define the ng-content Directive?
+  -Accessibility Applications
+  -Angular CLI
+  -Animation Support
+  -Cross-Platform App Development
+  -Code Generation
+  -Code Splitting
+  -Synergy with Popular Code Editors and IDEs
+  -Templates
+  -Testing
+  -State some advantages of Angular over other frameworks.
+  -Declarative UI
+  -Long-term Google Support
+4)What is the difference between Angular and AngularJS?
+5)What are Lifecycle hooks in Angular? Explain some life cycles hooks
+6)Could we make an angular application to render on the server-side?
+7)Explain Dependency Injection?
+8)Describe the MVVM architecture.
+9)Demonstrate navigating between different routes in an Angular application.
+10)What is the AOT (Ahead-Of-Time) Compilation? What are its advantages?
+11)Could you explain services in Angular?
+12)Discuss the advantages and disadvantages of using Angular?
+13)What is string interpolation in Angular?
+14)Explain Angular Authentication and Authorization.
+15)Can you explain the concept of scope hierarchy in Angular?
+16)How to generate a class
+17)Could you explain the concept of templates in Angular?
+18)Explain the difference between an Annotation and a Decorator in Angular?
+19)What are directives in Angular?
+20)What are the building blocks of Angular?
+21)Could you explain the difference between Angular expressions and JavaScript expressions?
+22)What is Data Binding? How many ways it can be done?
+23)Can you draw a comparison between the service() and the factory() functions?
+24)Please explain the digest cycle in Angular?
+25)What is SPA (Single Page Application) in Angular? Contrast SPA technology with traditional web technology?
+26)What is ViewEncapsulation and how many ways are there do to do it in Angular?
+
+https://github.com/sudheerj/angular-interview-questions#table-of-contents
+3)What is TypeScript
+4)Write a pictorial diagram of Angular architecture?
+4)What are the key components of Angular?
+4)What are directives?
+5)What are components?
+6)What are the differences between Component and Directive?
+7)What is a template?

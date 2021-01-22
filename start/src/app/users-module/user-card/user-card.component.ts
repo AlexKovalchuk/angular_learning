@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../../services/users-service/users.service';
 import { User } from '../../interfaces/user-interfaces';
@@ -8,7 +8,7 @@ import { User } from '../../interfaces/user-interfaces';
   templateUrl: './user-card.component.html',
   styleUrls: ['./user-card.component.scss']
 })
-export class UserCardComponent implements OnInit {
+export class UserCardComponent implements OnInit, OnChanges {
   userCard: User | null = null;
 
   constructor(
@@ -17,6 +17,12 @@ export class UserCardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    const userIdFromRoute = Number(routeParams.get('userId'));
+    this.getUserCard(userIdFromRoute);
+  }
+
+  ngOnChanges(): void {
     const routeParams = this.route.snapshot.paramMap;
     const userIdFromRoute = Number(routeParams.get('userId'));
     this.getUserCard(userIdFromRoute);
