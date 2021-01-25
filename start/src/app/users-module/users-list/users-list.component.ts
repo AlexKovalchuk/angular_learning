@@ -27,8 +27,8 @@ export class UsersListComponent implements OnInit {
   getUsersList(): void {
     this.userService.getUsersList()
     .subscribe((usersList: any) => {
+      console.log('usersList', typeof usersList, usersList)
       this.usersList = usersList;
-      console.log(this.usersList);
       this.ref.markForCheck();
     }
     );

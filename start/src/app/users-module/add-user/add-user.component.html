@@ -1,6 +1,6 @@
 <h1>Add new User!</h1>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<form [formGroup]="checkoutForm">
 
   <div>
     <label for="name">
@@ -35,9 +35,7 @@
       Image Url
     </label>
     <input id="img_url" type="text" formControlName="img_url">
-    <!-- https://swall.teahub.io/photos/small/303-3033000_asterix-avatar.jpg -->
   </div>
 
-  <button class="button" type="submit">Add New User</button>
-
+  <button class="button" (click)="sendUserData(checkoutForm.value, $event)" type="button">Add New User</button>
 </form>

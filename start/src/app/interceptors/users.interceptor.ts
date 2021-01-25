@@ -13,7 +13,6 @@ export class UsersInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('request', request);
     const {method} = request;
     if (method === 'POST') {
       request = request.clone({

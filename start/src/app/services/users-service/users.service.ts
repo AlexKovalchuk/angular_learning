@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, retry } from 'rxjs/operators';
 import { User } from 'src/app/interfaces/user-interfaces';
+
 
 @Injectable()
 export class UsersService {
@@ -17,7 +19,18 @@ export class UsersService {
   };
 
   getUsersList(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.usersUrl}/users-list`);
+    return this.http.get<User[]>(`${this.usersUrl}/users-list`)
+      .pipe(
+        map((users: User[], index: number) => {
+          console.log('map:', index, '-', users);
+          // return users;
+          return users.map(user => ({...user, status: 'Champion'}));
+        }),
+        catchError(error => {
+          console.log('Some error', error);
+          return throwError(error);
+        })
+      );
   }
 
   getUserCard(id: number): Observable<User> {
@@ -26,5 +39,9 @@ export class UsersService {
 
   // addUser(newUser: any): Observable<User[]> {}
 
+  private handleError(error: HttpErrorResponse): any {
+    console.log('Error during request.');
+    return throwError(error);
+  }
 
 }
