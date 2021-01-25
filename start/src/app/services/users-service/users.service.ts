@@ -23,7 +23,6 @@ export class UsersService {
       .pipe(
         map((users: User[], index: number) => {
           console.log('map:', index, '-', users);
-          // return users;
           return users.map(user => ({...user, status: 'Champion'}));
         }),
         catchError(error => {
