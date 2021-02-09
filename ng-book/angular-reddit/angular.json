@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-reddit"
+  "defaultProject": "angular-reddit",
+  "cli": {
+    "analytics": "687bfa92-9d65-48e6-ac83-553608d16957"
+  }
 }
